@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" th:action="@{/ejemplo3/agregarPersona}" th:object="${persona}" method="post">
+        <p>Nombre: <input type="text" th:field="*{nombre}"/></p>
+        <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Nombre tiene un error</p>
+        <p>Edad: <input type="number" th:field="*{edad}"/></p>
+        <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}">Edad tiene un error</p>
+        <p><input type="submit" value="Enviar" /></p>
+    </form>
+</body>
+</html>
