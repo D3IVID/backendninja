@@ -76,4 +76,15 @@ public class Curso {
     public void setHoras(int horas) {
         this.horas = horas;
     }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
+                ", horas=" + horas +
+                '}';
+    }
 }
