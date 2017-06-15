@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Horas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="curso : ${cursos}">
+                <th><span th:text="${curso.nombre}"></span></th>
+                <th><span th:text="${curso.descripcion}"></span></th>
+                <th><span th:text="${curso.precio}"></span></th>
+                <th><span th:text="${curso.horas}"></span></th>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
